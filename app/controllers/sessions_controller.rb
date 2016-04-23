@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :set_user, only: [:edit, :update, :destroy]
+  
   def new
   end
   
@@ -17,5 +19,9 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     redirect_to root_path
+  end
+  
+  def set_user
+    @user = User.find(params[:id])
   end
 end
