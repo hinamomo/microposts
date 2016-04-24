@@ -4,20 +4,20 @@
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user, html: {class: "form-horizontal"}) do |f| %>
 
-      <label for="message_name" class="control-label col-md-2">eメール:</label>
+      <%= f.label :email %>
       <%=f.text_field :email, class: 'form-control' %>
 
-      <label for="message_name" class="control-label col-md-2">自己紹介:</label>
-      <%=f.text_field :introduction, class: 'form-control' %>
+      <%= f.label :introduction %>      
+      <%=f.text_area :introduction, class: 'form-control' %>
 
-      <label for="message_name" class="control-label col-md-2">住所(地域):</label>
+      <%= f.label :area %>
       <%=f.text_field :area, class: 'form-control' %>
 
-      <label for="message_name" class="control-label col-md-2">HP:</label>
-      <%=f.password_field :homepage, class: 'form-control' %>
+      <%= f.label :homepage %>
+      <%=f.text_field :homepage, class: 'form-control' %>
 
-      <label for="message_name" class="control-label col-md-2">誕生日:</label>
-      <%=f.password_field :birthday, class: 'form-control' %>
+      <%= f.label :birthday %>
+      <%=f.text_field :birthday, class: 'form-control date-picker' %>
 
       <%=f.submit "Edit my profile" , class: "btn btn-large btn-primary" %>
     <% end %>

@@ -3,20 +3,30 @@
   <%= @user.name %>
 </h1>
 
-<div class="panel-body">
-  email : 
-  <%=@user.email %>
-  <br>
-    introduction :
-  <%=@user.introduction %>
-  <br>
-    area :
-  <%=@user.area %>
-  <br>
-    homepage :
-  <%=@user.homepage %>
-  <br>
-    birthday :
-  <%=@user.birthday %>
-  <br>
-</div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    
+    <br>
+    <br>
+    <label>email:</label>
+    <%=@user.email %>
+    <br>
+    
+    <label>introduction:</label>
+    <%=@user.introduction %>
+    <br>
+    
+    <label>area:</label>
+    <%=@user.area %>
+    <br>
+       
+    <label>homepage:</label>
+    <%=@user.homepage %>
+    <br>
+
+    <label>birthday:</label>
+    <%=@user.birthday %>
+    <br>
+    </div>
+    </div>
+    
