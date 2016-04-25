@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   before_action :set_user, only: [:edit, :update, :destroy]
-  
+    
   def new
   end
   
@@ -24,4 +24,5 @@ class SessionsController < ApplicationController
   def set_user
     @user = User.find_by_id(params[:id])
   end
+  
 end
