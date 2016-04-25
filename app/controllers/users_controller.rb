@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update(user_params_profile)
       #保存に成功した場合はトップページへリダイレクト
-      redirect_to root_path , notice: 'プロフィールを編集しました'
+      redirect_to current_user, notice: 'プロフィールを編集しました'
     else
       #保存に失敗した場合は編集画面へ戻す
       render 'edit'
