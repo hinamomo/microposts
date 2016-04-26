@@ -47,3 +47,5 @@ group :development do
   gem 'spring'
 end
 
+gem 'validates_timeliness', '~> 3.0'
+
