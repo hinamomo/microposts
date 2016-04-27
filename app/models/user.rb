@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
                     
   VALID_BIRTHDAY_REGEX = /\A\d{4}\/\d{2}\/\d{2}\z/ 
-  validates :birthday, format: { with: VALID_BIRTHDAY_REGEX}, allow_blank: false
+  validates :birthday, format: { with: VALID_BIRTHDAY_REGEX}, allow_blank: false, on: :update
 
   has_secure_password
 end
