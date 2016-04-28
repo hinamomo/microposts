@@ -1,0 +1,5 @@
+<% if @following_users.any? %>
+  <ol class="microposts">
+    <%= render @following_users %>
+  </ol>
+<% end %>
