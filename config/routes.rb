@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   get 'signup' , to: 'users#new'
   get 'edit', to:'users#edit'
-  get 'followings', to:'user#followings'
+#  get 'followings', to:'user#followings'
     
   resources :users do
     member do
@@ -13,8 +13,8 @@ Rails.application.routes.draw do
       get 'followers'
     end
 
-    collection do
-    end
+#    collection do
+#    end
   end
   
   resources :sessions, only: [:new, :create, :destroy]

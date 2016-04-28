@@ -1,5 +1,32 @@
 <% if @following_users.any? %>
   <ol class="microposts">
-    <%= render @following_users %>
+    <% @following_users.each do |following_user| %>
+      <li>
+        <%= gravatar_for following_user %>
+        <%= following_user.name %>
+      </li>
+      <br>
+      <br>
+      <br>
+      
+      <label>email:</label>
+      <%=following_user.email %>
+      <br>
+
+      <label>introduction:</label>
+      <%=following_user.introduction %>
+      <br>
+
+      <label>area:</label>
+      <%=following_user.area %>
+      <br>
+
+      <label>homepage:</label>
+      <%=following_user.homepage %>
+      <br>
+
+      <label>birthday:</label>
+      <%=following_user.birthday %>
+    <% end %> 
   </ol>
 <% end %>
