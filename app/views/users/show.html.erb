@@ -6,6 +6,7 @@
         <%= @user.name %>
       </h1>
     </section>
+    <%= render 'profile' %>
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
@@ -15,30 +16,6 @@
         <%= render @microposts %>
       </ol>
     <% end %>
-  </div>
-
-  <div class="col-md-6">
-    <br>
-    <br>
-    <label>email:</label>
-    <%=@user.email %>
-    <br>
-
-    <label>introduction:</label>
-    <%=@user.introduction %>
-    <br>
-
-    <label>area:</label>
-    <%=@user.area %>
-    <br>
-
-    <label>homepage:</label>
-    <%=@user.homepage %>
-    <br>
-
-    <label>birthday:</label>
-    <%=@user.birthday %>
-    <br>
   </div>
 </div>
 
