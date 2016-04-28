@@ -6,8 +6,17 @@ Rails.application.routes.draw do
   get 'signup' , to: 'users#new'
   get 'edit', to:'users#edit'
   get 'followings', to:'user#followings'
+    
+  resources :users do
+    member do
+      get 'followings'
+      get 'followers'
+    end
 
-  resources :users
+    collection do
+    end
+  end
+  
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts
   resources :relationships, only: [:create, :destroy]
