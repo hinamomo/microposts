@@ -20,7 +20,7 @@
         <%= render @microposts %>
       </ol>
       
-      <%= paginate @microposts %>
+      <%= paginate @microposts, outer_window: 4 %>
     <% end %>
   </div>
 </div>
